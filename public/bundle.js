@@ -26660,11 +26660,14 @@
 	    null,
 	    React.createElement(Nav, null),
 	    React.createElement(
-	      'h2',
-	      null,
-	      'Main Component'
-	    ),
-	    props.children
+	      'div',
+	      { className: 'row' },
+	      React.createElement(
+	        'div',
+	        { className: 'columns medium-6 large-4 small-centered' },
+	        props.children
+	      )
+	    )
 	  );
 	};
 
@@ -28445,21 +28448,46 @@
 
 	'use strict';
 
-	var React = __webpack_require__(8);
+	var React = __webpack_require__(8),
+	    _require = __webpack_require__(185),
+	    Link = _require.Link;
+
 
 	var Examples = function Examples(props) {
 	  return React.createElement(
 	    'div',
 	    null,
 	    React.createElement(
-	      'h3',
-	      null,
+	      'h1',
+	      { className: 'text-center' },
 	      'Examples Component!'
 	    ),
 	    React.createElement(
 	      'p',
 	      null,
-	      'Welcome to examples page!'
+	      'Examples to try out with locations!'
+	    ),
+	    React.createElement(
+	      'ol',
+	      null,
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Chennai' },
+	          'Chennai,IN'
+	        )
+	      ),
+	      React.createElement(
+	        'li',
+	        null,
+	        React.createElement(
+	          Link,
+	          { to: '/?location=Mumbai' },
+	          'Mumbai,IN'
+	        )
+	      )
 	    )
 	  );
 	};
