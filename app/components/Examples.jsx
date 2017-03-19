@@ -4,7 +4,7 @@ var React = require('react'),
 var Examples=(props)=>{
   return (
     <div>
-      <h1 className="text-center">Examples Component!</h1>
+      <h1 className="text-center page-title">Examples Component!</h1>
       <p>Examples to try out with locations!</p>
       <ol>
         <li>
